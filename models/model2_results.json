@@ -1,0 +1,48 @@
+{
+  "model_name": "Model 2 \u2014 Consortium Decision",
+  "task": "Multi-class Classification (Single Bank / Consortium / Reject)",
+  "target_variable": "consortium_label (derived)",
+  "dataset_size": 28632,
+  "train_size": 22905,
+  "test_size": 5727,
+  "num_features": 11,
+  "algorithms": {
+    "Decision Tree": {
+      "accuracy": 85.06,
+      "precision": 0.8531,
+      "recall": 0.8506,
+      "f1": 0.8511,
+      "best_params": {
+        "criterion": "gini",
+        "max_depth": 2,
+        "min_samples_leaf": 200,
+        "min_samples_split": 100
+      }
+    },
+    "KNN": {
+      "accuracy": 81.01,
+      "precision": 0.8013,
+      "recall": 0.8101,
+      "f1": 0.8004,
+      "best_params": {
+        "metric": "manhattan",
+        "n_neighbors": 55,
+        "weights": "distance"
+      }
+    },
+    "Gradient Boosting": {
+      "accuracy": 78.64,
+      "precision": 0.6712,
+      "recall": 0.7864,
+      "f1": 0.7359,
+      "best_params": {
+        "learning_rate": 0.005,
+        "max_depth": 1,
+        "min_samples_leaf": 200,
+        "n_estimators": 30
+      }
+    }
+  },
+  "best_algorithm": "Decision Tree",
+  "best_accuracy": 85.06
+}

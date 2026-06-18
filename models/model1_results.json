@@ -1,0 +1,52 @@
+{
+  "model_name": "Model 1 \u2014 NPA Prediction",
+  "task": "Binary Classification (Loan Default)",
+  "target_variable": "loan_status",
+  "dataset_size": 28632,
+  "train_size": 22905,
+  "test_size": 5727,
+  "num_features": 11,
+  "algorithms": {
+    "Logistic Regression": {
+      "accuracy": 80.65,
+      "roc_auc": 0.8076,
+      "precision": 0.7309,
+      "recall": 0.4357,
+      "f1": 0.5476,
+      "best_params": {
+        "C": 0.01,
+        "max_iter": 1000,
+        "penalty": "l2",
+        "solver": "lbfgs"
+      }
+    },
+    "Random Forest": {
+      "accuracy": 81.18,
+      "roc_auc": 0.8258,
+      "precision": 0.8502,
+      "recall": 0.3105,
+      "f1": 0.4743,
+      "best_params": {
+        "max_depth": 2,
+        "min_samples_leaf": 80,
+        "min_samples_split": 50,
+        "n_estimators": 50
+      }
+    },
+    "XGBoost": {
+      "accuracy": 81.71,
+      "roc_auc": 0.8041,
+      "precision": 0.865,
+      "recall": 0.3537,
+      "f1": 0.5291,
+      "best_params": {
+        "learning_rate": 0.01,
+        "max_depth": 2,
+        "n_estimators": 50,
+        "subsample": 0.6
+      }
+    }
+  },
+  "best_algorithm": "XGBoost",
+  "best_accuracy": 81.71
+}
